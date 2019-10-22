@@ -8,7 +8,7 @@ $address = $_POST['address'];
 if($name !=''&& $email !=''&& $contact !=''&& $address !='')
 {
 //  To redirect form on a particular page
-header("Location:https://www.formget.com/app/");
+header("Location:https://victor-test-app123.herokuapp.com/redirect.php");
 }
 else{
 ?><span><?php echo "Please fill all fields.....!!!!!!!!!!!!";?></span> <?php
