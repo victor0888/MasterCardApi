@@ -1,7 +1,4 @@
 <?php
-
-
-$curl = curl_init();
 if(isset($_POST['submit'])){
 // Fetching variables of the form which travels in URL
 $username = "merchant".$_POST['username'];
@@ -17,6 +14,8 @@ header("Location:https://victor-test-app123.herokuapp.com/CreateCheckoutSessionE
 else{
 <span> echo "Please fill all fields.....!!!!!!!!!!!!";</span>
     }
+
+$curl = curl_init();
 $username1 = "merchant.TESTVICTESNB237";
 $password1 = "ed17a6e2ed43172c0f7bde912cbe54de";
 curl_setopt_array($curl, array(
