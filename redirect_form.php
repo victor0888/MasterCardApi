@@ -21,7 +21,7 @@
 <input id='btn' name="submit" type='submit' value='Submit'>
 <!---- Including PHP File Here ---->
 <?php
-include "include/redirect.php";
+include "redirect.php";
 ?>
 </form>
 </div>
