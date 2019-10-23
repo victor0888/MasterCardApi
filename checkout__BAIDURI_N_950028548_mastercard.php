@@ -17,6 +17,7 @@
  */
 
 include '_bootstrap.php';
+include 'redirect.php';
 ?>
 <!DOTYPE html>
 <html> 
