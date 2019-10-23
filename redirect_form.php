@@ -9,7 +9,7 @@
 <div class="main">
 <div class="first">
 <h2>Redirect Form To a Particular Page On Submit using PHP</h2>
-<form action="CreateCheckoutSessionExample.php" id="#form" method="post" name="#form">
+<form action="redirect.php" id="#form" method="post" name="#form">
 <label>API Username :</label>
 <input id="username" name="username" placeholder='Your API Username' type='text'>
 <label>API Password :</label>
@@ -20,7 +20,7 @@
 <input id="orderid" name="orderid" placeholder='Order ID' type='text' value="">
 <input id='btn' name="submit" type='submit' value='Submit'>
 <!---- Including PHP File Here ---->
- <?php include "CreateCheckoutSessionExample.php";?>
+ <?php include "redirect.php";?>
 </form>
 </div>
 </div>
