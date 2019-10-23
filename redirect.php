@@ -8,6 +8,10 @@ $currency = $_POST['currency'];
 $orderid = $_POST['orderid'];
 if($username !=''&& $password !=''&& $currency !=''&& $orderid !='')
 {
+<?php echo $username;?><br>
+<?php echo $password;?><br>
+<?php echo $currency;?><br>
+<?php echo $orderid;?><br>
 //  To redirect form on a particular page
 header("Location:https://victor-test-app123.herokuapp.com/redirect.php"); 
 }
@@ -16,7 +20,4 @@ else{
 }
 }
 ?>
-<?php echo $username;?><br>
-<?php echo $password;?><br>
-<?php echo $currency;?><br>
-<?php echo $orderid;?><br>
+
