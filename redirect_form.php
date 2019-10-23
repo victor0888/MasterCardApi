@@ -18,6 +18,8 @@
 <input id="currency" name="currency" value="<?php echo $_POST['currency']; ?>"placeholder='AUD' type='text'>
 <label>OrderId:</label>
 <input id="orderid" name="orderid" value="<?php echo $_POST['orderid']; ?>" placeholder='Order ID' type='text' value="">
+<label>returnUrl:</label>
+<input id="returnUrl" name="returnUrl" value="<?php echo $_POST['returnUrl']; ?>" placeholder='intercation.returnUrl - https://tigris-eden.com/' type='text' value="">
 <input id='btn' name="submit" type='submit' value='Submit'>
 <!---- Including PHP File Here ---->
 </form>
