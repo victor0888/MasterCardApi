@@ -12,9 +12,10 @@ if($username !=''&& $password !=''&& $currency !=''&& $orderid !='')
 header("Location:https://victor-test-app123.herokuapp.com/CreateCheckoutSessionExample.php");
 }
 else{
-<span> echo "Please fill all fields.....!!!!!!!!!!!!";</span>
+?><span><?php  echo "Please fill all fields.....!!!!!!!!!!!!";?></span><?php
     }
-
+}?>
+<?php
 $curl = curl_init();
 $username1 = "merchant.TESTVICTESNB237";
 $password1 = "ed17a6e2ed43172c0f7bde912cbe54de";
