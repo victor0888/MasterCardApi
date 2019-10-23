@@ -1,5 +1,5 @@
  <?php 
-$username = "merchant".$_POST['username'];
+$username = "merchant.".$_POST['username'];
 $merchant = $_POST['username'];
 $password = $_POST['password'];
 $currency = $_POST['currency'];
