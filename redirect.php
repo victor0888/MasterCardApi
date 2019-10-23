@@ -1,5 +1,4 @@
 <?php
-include "redirect_form.php";
 if(isset($_POST['submit'])){
 // Fetching variables of the form which travels in URL
   
