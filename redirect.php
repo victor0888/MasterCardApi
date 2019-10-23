@@ -6,8 +6,6 @@ $merchant = $_POST['username'];
 $password = $_POST['password'];
 $currency = $_POST['currency'];
 $orderid = $_POST['orderid'];
-    echo $username;<br>
-   echo $password;<br>
 if($username !=''&& $password !=''&& $currency !=''&& $orderid !='')
 {
 //  To redirect form on a particular page
