@@ -11,9 +11,10 @@ $orderid = $_POST['orderid'];
 <body>
 
 Hello <?php echo $username; ?><br>
-Hello <?php echo $_POST['password']; ?><br>
-Hello <?php echo $_POST['currency']; ?><br>
-Hello <?php echo $_POST['orderid']; ?><br>
+Hello <?php echo $merchant; ?><br>
+Hello <?php echo $password; ?><br>
+Hello <?php echo $currency; ?><br>
+Hello <?php echo $orderid; ?><br>
 </body>
 
 </html>
