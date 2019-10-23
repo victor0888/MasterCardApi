@@ -12,7 +12,7 @@ $orderid = $_POST['orderid'];
 
 Hello <?php echo $username; ?><br>
 Hello <?php echo $_POST['password']; ?><br>
-Hello <?php echo $_POST['password']; ?><br>
+Hello <?php echo $_POST['currency']; ?><br>
 Hello <?php echo $_POST['orderid']; ?><br>
 </body>
 
