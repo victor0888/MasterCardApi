@@ -31,24 +31,24 @@ if ($err) {
 } else {
   //echo $response;
  parse_str($response);
-echo "<br>".$merchant."<br>";
-echo $result."<br>";
-echo $session_id."<br>";
-echo $session_updateStatus."<br>";
-echo $session_version;"<br>";
-echo $successIndicator;
+$newmwerchant = $merchant."<br>";
+$result = $result."<br>";
+$sessionid = $session_id."<br>";
+$sessionstatus =  $session_updateStatus."<br>";
+$sessionversion =  $session_version;"<br>";
+$successindicator = $successIndicator;
 }
 ?>
 <html>
 
 <body>
 <br><br>
-Hello <?php echo $username; ?><br>
-Hello <?php echo $merchant; ?><br>
-Hello <?php echo $password; ?><br>
-Hello <?php echo $currency; ?><br>
-Hello <?php echo $orderid; ?><br>
-Hello <?php echo $returnUrl; ?><br>
+Hello <?php echo $newmwerchant; ?><br>
+Hello <?php echo $result; ?><br>
+Hello <?php echo $sessionid; ?><br>
+Hello <?php echo $sessionstatus; ?><br>
+Hello <?php echo $sessionversion; ?><br>
+Hello <?php echo $successindicator; ?><br>
 </body>
 
 </html>
