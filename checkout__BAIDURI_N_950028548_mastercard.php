@@ -1,5 +1,5 @@
+Learn more or give us feedback
 <?php
-
 /*
  * Copyright (c) 2016 Mastercard
  *
@@ -15,15 +15,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 include '_bootstrap.php';
 include 'redirect.php';
-
-echo $sessionid;
 ?>
 <!DOTYPE html>
 <html> 
-<!--"https://paymentgateway.commbank.com.au/checkout/version/40/checkout.js"--> 
+<!--"https://test-gateway.mastercard.com/checkout/version/47/checkout.js"--> 
 <head> 
 <script src="https://baiduri-bpgs.mtf.gateway.mastercard.com/checkout/version/46/checkout.js" 
 data-error="errorCallback" 
@@ -40,7 +37,7 @@ var n = x.toString();
 //var document.getElementById("demo").innerHTML = x; 
 } 
 </script> 
-<?php include 'redirect.php';?>
+
 <script type="text/javascript"> 
     var sessionId = "<?php echo $sessionid; ?>";
     var sessionVersion = "<?php echo $sessionversion; ?>";
@@ -70,7 +67,6 @@ cancelCallback = "http://www.bbc.com/";
             merchantId: merchantId
         };
     }
-
     // This method is specifically for the full payment page option. Because we leave this page and return to it, we need to preserve the
     // state of successIndicator and orderId using the beforeRedirect/afterRedirect option
     function afterRedirect(data) {
@@ -85,10 +81,8 @@ cancelCallback = "http://www.bbc.com/";
             sessionId = data.sessionId;
             sessionVersion = data.sessionVersion;
             merchantId = data.merchantId;
-
             window.location.href = "https://victor-test-app123.herokuapp.com/displayResult.php/" + data.orderId + "/" + data.successIndicator + "/" + data.sessionId;
         }
-
 //        var result = (resultIndicator === data.successIndicator)   ? "SUCCESS" : "ERROR";
 //        window.location.href = "/hostedCheckout/" + data.orderId + "/" + result;
     }	
@@ -112,7 +106,7 @@ amount: function() {
 //Dynamic calculation of amount 
 return 80 + 25; 
 }, 
-currency: 'BND', 
+currency: 'AUD', 
 description: 'Ordered goods', 
 id: JSON.stringify(n) 
 }, 
