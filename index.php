@@ -46,6 +46,7 @@ include '_bootstrap.php';
             <li><a href="./threeds2.html">3DS JavaScript API with Session</a></li>
             <li><a href="./3dsRedirectSimple.php">3DS WSAPI Simple responseUrl</a></li>
             <li><a href="./redirect_form.php">Redirect Form</a></li>
+            <li><a href="./CreateCheckoutSessionExample.php">Redirect Form</a></li>
         </ul>
     </body>
 </html>
