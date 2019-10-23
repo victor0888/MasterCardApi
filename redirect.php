@@ -5,6 +5,7 @@ $merchant = $_POST['username'];
 $password = $_POST['password'];
 $currency = $_POST['currency'];
 $orderid = $_POST['orderid'];
+$returnUrl = $_POST['returnUrl'];
 $curl = curl_init();
 curl_setopt_array($curl, array(
   CURLOPT_URL => "https://baiduri-bpgs.mtf.gateway.mastercard.com/api/nvp/version/46",
@@ -14,7 +15,7 @@ curl_setopt_array($curl, array(
   CURLOPT_TIMEOUT => 300,
   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
   CURLOPT_CUSTOMREQUEST => "POST",
-  CURLOPT_POSTFIELDS => "apiOperation=CREATE_CHECKOUT_SESSION&merchant=$merchant&apiUsername=$username&apiPassword=$password&order.currency=$currency&order.id=$orderid&order.amount=45",
+  CURLOPT_POSTFIELDS => "apiOperation=CREATE_CHECKOUT_SESSION&merchant=$merchant&apiUsername=$username&apiPassword=$password&order.currency=$currency&order.id=$orderid&order.amount=45&interaction.returnUrl=$returnUrl",
   CURLOPT_HTTPHEADER => array(
     "Authorization: Basic bWVyY2hhbnQuVEVTVFZJQ1RFU05BQjAxOmU5NmYyYjA0YzI4ZGRmN2FhOWZhYjFhYjQ1NGNkNzc1",
     "Content-Type: application/x-www-form-urlencoded",
@@ -41,12 +42,13 @@ echo $successIndicator;
 <html>
 
 <body>
-
+<br><br>
 Hello <?php echo $username; ?><br>
 Hello <?php echo $merchant; ?><br>
 Hello <?php echo $password; ?><br>
 Hello <?php echo $currency; ?><br>
 Hello <?php echo $orderid; ?><br>
+Hello <?php echo $returnUrl; ?><br>
 </body>
 
 </html>
