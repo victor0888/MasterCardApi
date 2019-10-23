@@ -8,13 +8,13 @@ $currency = $_POST['currency'];
 $orderid = $_POST['orderid'];
 if($username !=''&& $password !=''&& $currency !=''&& $orderid !='')
 {
-  echo $username;
 //  To redirect form on a particular page
 header("Location:https://victor-test-app123.herokuapp.com/redirect.php"); 
 }
 else{
 ?><span><?php echo "Please fill all fields.....!!!!!!!!!!!!";?></span> <?php
 }
+  echo $username;
 }
 ?>
 
