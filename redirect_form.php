@@ -9,7 +9,7 @@
 <div class="main">
 <div class="first">
 <h2>Redirect Form To a Particular Page On Submit using PHP</h2>
-<form action="redirect_form.php" id="#form" method="post" name="#form">
+<form action="redirect.php" id="#form" method="post" name="#form">
 <label>API Username :</label>
 <input id="username" name="username" placeholder='Your API Username' type='text'>
 <label>API Password :</label>
