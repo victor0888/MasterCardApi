@@ -16,3 +16,7 @@ else{
 }
 }
 ?>
+<?php echo $username;?><br>
+<?php echo $password;?><br>
+<?php echo $currency;?><br>
+<?php echo $orderid;?><br>
