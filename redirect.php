@@ -4,8 +4,6 @@ if(isset($_POST['submit'])){
 // Fetching variables of the form which travels in URL
   
 $username = "merchant".$_POST['username'];
-  ?>
-<span><?php echo $username;?></span><?php
 $merchant = $_POST['username'];
 $password = $_POST['password'];
 $currency = $_POST['currency'];
@@ -18,8 +16,8 @@ header("Location:https://victor-test-app123.herokuapp.com/redirect.php");
 else{
 ?><span><?php echo "Please fill all fields.....!!!!!!!!!!!!";?></span> <?php
 }
-  echo $username;
+  
 }
 ?>
-
+<span><?php echo $username;?></span> 
 
