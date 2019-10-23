@@ -2,7 +2,10 @@
 include "redirect_form.php";
 if(isset($_POST['submit'])){
 // Fetching variables of the form which travels in URL
+  
 $username = "merchant".$_POST['username'];
+  ?>
+<span><?php echo $username;?></span><?php
 $merchant = $_POST['username'];
 $password = $_POST['password'];
 $currency = $_POST['currency'];
