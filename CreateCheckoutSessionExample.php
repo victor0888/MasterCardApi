@@ -13,4 +13,5 @@ echo $merchant;
 echo $password;
 echo $currency;
 echo $orderid; 
+}
 ?>
