@@ -20,6 +20,7 @@
 <input id="orderid" name="orderid" placeholder='Order ID' type='text' value="">
 <input id='btn' name="submit" type='submit' value='Submit'>
 <!---- Including PHP File Here ---->
+ <?php include "CreateCheckoutSessionExample.php";?>
 </form>
 </div>
 </div>
