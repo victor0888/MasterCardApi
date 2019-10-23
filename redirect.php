@@ -37,7 +37,10 @@ curl_setopt_array($curl, array(
   CURLOPT_CUSTOMREQUEST => "POST",
   CURLOPT_POSTFIELDS => "apiOperation=CREATE_CHECKOUT_SESSION&merchant=$merchant&apiUsername=$username&apiPassword=$password&order.currency=$AUD&order.id=546098tr8834&order.reference=4523422frt8tii&transaction.reference=3452335ff&order.amount=5&interaction.returnUrl=https%3A%2F%2Ftigris-eden.com%2F&lineOfBusiness=test_socks",
   CURLOPT_HTTPHEADER => array(
-'Authorization: Basic ' . base64_encode("$username:$password"))
+  "Authorization: Basic bWVyY2hhbnQuVEVTVFZJQ1RFU05BQjAxOmU5NmYyYjA0YzI4ZGRmN2FhOWZhYjFhYjQ1NGNkNzc1",
+    "Content-Type: application/x-www-form-urlencoded",
+    "Postman-Token: 0fc6857b-c5c6-44b6-a1d3-d6c987c73399",
+    "cache-control: no-cache"
 ));
 $response = curl_exec($curl);
 $err = curl_error($curl);
