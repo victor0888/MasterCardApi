@@ -28,7 +28,14 @@ curl_close($curl);
 if ($err) {
   echo "cURL Error #:" . $err;
 } else {
-  echo $response;
+  //echo $response;
+ parse_str($response);
+echo "<br>".$merchant."<br>";
+echo $result."<br>";
+echo $session_id."<br>";
+echo $session_updateStatus."<br>";
+echo $session_version;"<br>";
+echo $successIndicator;
 }
 ?>
 <html>
