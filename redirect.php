@@ -31,11 +31,11 @@ if ($err) {
 } else {
   //echo $response;
  parse_str($response);
-$newmwerchant = $merchant."<br>";
-$result = $result."<br>";
-$sessionid = $session_id."<br>";
-$sessionstatus =  $session_updateStatus."<br>";
-$sessionversion =  $session_version;"<br>";
+$newmwerchant = $merchant;
+$result = $result;
+$sessionid = $session_id;
+$sessionstatus =  $session_updateStatus;
+$sessionversion =  $session_version;
 $successindicator = $successIndicator;
 }
 ?>
