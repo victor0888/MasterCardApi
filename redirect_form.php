@@ -11,13 +11,13 @@
 <h2>Redirect Form To a Particular Page On Submit using PHP</h2>
 <form action="redirect.php" id="#form" method="post" name="#form">
 <label>API Username :</label>
-<input id="username" name="username" placeholder='Your API Username' type='text'>
+<input id="username" name="username" value="<?php echo $username?>" placeholder='Your API Username' type='text'>
 <label>API Password :</label>
-<input id="password" name="password" placeholder='Valid API Password' type='text'>
+<input id="password" name="password" value="<?php echo $password?>" placeholder='Valid API Password' type='text'>
 <label>Currency :</label>
-<input id="currency" name="currency" placeholder='AUD' type='text'>
+<input id="currency" name="currency" value="<?php echo $currency?>" placeholder='AUD' type='text'>
 <label>OrderId:</label>
-<input id="orderid" name="orderid" placeholder='Order ID' type='text' value="">
+<input id="orderid" name="orderid" value="<?php echo $orderid?>" placeholder='Order ID' type='text' value="">
 <input id='btn' name="submit" type='submit' value='Submit'>
 <!---- Including PHP File Here ---->
 <?php
