@@ -8,7 +8,7 @@
 <body>
 <div class="main">
 <div class="first">
-<h2>Redirect Form To a Particular Page On Submit using PHP</h2>
+<h2>Redirect To Create Checkout Session Request On Submit</h2>
 <form action="redirect.php" id="#form" method="post" name="#form">
 <label>API Username :</label>
   <label>TEST950029025</label>
