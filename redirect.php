@@ -1,5 +1,10 @@
-<?php
-include "redirect_form.php";
-?>
-<span><?php echo $username;?></span> 
 
+<html>
+
+<body>
+
+Hello <?php echo $_POST['username']; ?>
+
+</body>
+
+</html>
