@@ -40,12 +40,12 @@ var n = x.toString();
 //var document.getElementById("demo").innerHTML = x; 
 } 
 </script> 
-
+<?php include 'redirect.php';?>
 <script type="text/javascript"> 
-    var sessionId = "<?php include 'redirect.php'; echo $sessionid; ?>";
-    var sessionVersion = "<?php include 'redirect.php'; echo $sessionversion; ?>";
-    var successIndicator = "<?php include 'redirect.php'; echo $successindicator; ?>";
-    var orderId = "<?php include 'redirect.php'; echo $orderid;  ?>";
+    var sessionId = "<?php echo $sessionid; ?>";
+    var sessionVersion = "<?php echo $sessionversion; ?>";
+    var successIndicator = "<?php echo $successindicator; ?>";
+    var orderId = "<?php echo $orderid;  ?>";
 var x = Math.floor((Math.random() * 100000) + 1000); 
 var n = x.toString(); 
 function errorCallback(error) { 
@@ -103,7 +103,7 @@ function completeCallback(response) {
 		window.location.href = "https://victor-test-app123.herokuapp.com/displayResult.php/" + orderId + "/" + sessionId + "/" + result;
     }
 var text = Checkout.configure({ 
-merchant:"<?php include 'redirect.php'; echo $newmwerchant; ?>",
+merchant:"<?php echo $newmwerchant; ?>",
 //lineOfBusiness:'test_socks',
 //'VICTOR01', 
 //'TESTPAPFACEVAL01', 
