@@ -17,7 +17,6 @@
 
 # I am file2.php
 session_start(); # read up on session.auto_start
-echo $_SESSION["a"];
 
 ?>
 <!DOTYPE html>
@@ -25,9 +24,9 @@ echo $_SESSION["a"];
 <!--"https://test-gateway.mastercard.com/checkout/version/47/checkout.js"--> 
 <head> 
 <script type="text/javascript"> 
-    var sessionId = "<?= $sessionid; ?>";
-    var sessionVersion = "<?= $sessionversion; ?>";
-    var successIndicator = "<?= $successindicator; ?>";
+    var sessionId = "<?= $_SESSION["sessionid"]; ?>";
+    var sessionVersion = "<?= $_SESSION["sessionversion"]; ?>";
+    var successIndicator = "<?= $_SESSION["successindicator"]; ?>";
     var orderId = "<?= json_encode($orderid);  ?>";
     var resultIndicator = null;
 </script> 
@@ -40,12 +39,13 @@ China Union Pay:
 
 <p id="demo">
 	<br><br>
-Hello <?php echo $newmwerchant; ?><br>
-Hello <?php echo $result; ?><br>
-Hello <?php echo $sessionid; ?><br>
-Hello <?php echo $sessionstatus; ?><br>
-Hello <?php echo $sessionversion; ?><br>
-Hello <?php echo $successindicator; ?><br><br>
+Hello <?php echo $_SESSION["a"];?><br>
+Hello <?php echo $_SESSION["newmwerchant"]; ?><br>
+Hello <?php echo $_SESSION["result"]; ?><br>
+Hello <?php echo $_SESSION["sessionid"]; ?><br>
+Hello <?php echo $_SESSION["sessionstatus"]; ?><br>
+Hello <?php echo $_SESSION["sessionversion"]; ?><br>
+Hello <?php echo $_SESSION["successindicator"]; ?><br><br>
 	</p> 
 
 <p id="demo2">
