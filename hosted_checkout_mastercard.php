@@ -16,7 +16,7 @@
  */
 include '_bootstrap.php';
 
-$newmwerchantH = $_POST['username'];
+$newmwerchantH = $_POST['newmwerchant'];
 $resultH; = $_POST['$result'];
 $sessionidH = $_POST['sessionid'];
 $sessionstatusH = $_POST['sessionstatus'];
