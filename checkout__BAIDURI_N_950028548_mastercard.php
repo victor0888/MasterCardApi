@@ -17,6 +17,14 @@ Learn more or give us feedback
  */
 include '_bootstrap.php';
 include 'redirect.php';
+session_start();
+$newmwerchantH = $_SESSION['newmwerchant'];
+$resultH = $_SESSION['newmwerchant'];
+$sessionidH = $_SESSION['sessionid'];
+$sessionstatusH =  $_SESSION['sessionstatus'];
+$sessionversionH =  $_SESSION['sesionversion'];
+$successindicatorH = $_SESSION['successindicator'];
+$orderidH = $_SESSION['orderid'];
 ?>
 <!DOTYPE html>
 <html> 
@@ -39,10 +47,10 @@ var n = x.toString();
 </script> 
 
 <script type="text/javascript"> 
-    var sessionId = <?php echo json_encode($sessionid); ?>;
-    var sessionVersion = <?php echo json_encode($sessionversion); ?>;
-    var successIndicator = <?php echo json_encode($successindicator); ?>;
-    var orderId = <?php echo json_encode($orderid);  ?>";
+    var sessionId = <?php echo json_encode($sessionidH); ?>;
+    var sessionVersion = <?php echo json_encode($sessionversionH); ?>;
+    var successIndicator = <?php echo json_encode($successindicatorH); ?>;
+    var orderId = <?php echo json_encode($orderidH);  ?>;
 var x = Math.floor((Math.random() * 100000) + 1000); 
 var n = x.toString(); 
 function errorCallback(error) { 
@@ -146,3 +154,6 @@ China Union Pay:
 <p id="demo2"></p> 
 </body> 
 </html> 
+<?php
+	session_destroy()
+?>
