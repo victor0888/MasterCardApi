@@ -15,7 +15,6 @@
  * limitations under the License.
  */
 include '_bootstrap.php';
-include 'redirect.php';
 session_start();
 $newmwerchantH = $_SESSION['newmwerchant'];
 $resultH = $_SESSION['newmwerchant'];
