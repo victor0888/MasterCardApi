@@ -44,7 +44,6 @@ $successindicator = $successIndicator;
 <html>
  <head>
 <meta content="noindex, nofollow" name="robots">
-<link href='redirect_form.css' rel='stylesheet' type='text/css'> <!--== Include CSS File Here ==-->
 </head>
 <body>
 <br><br>
@@ -54,18 +53,6 @@ Hello <?php echo $sessionid; ?><br>
 Hello <?php echo $sessionstatus; ?><br>
 Hello <?php echo $sessionversion; ?><br>
 Hello <?php echo $successindicator; ?><br><br>
-<form action="hosted_checkout_mastercard.php" id="#form" method="post" name="#form">
-<label>Merchant :</label>
-<input id="merchant" name="merchant" value="<?php echo $_POST['newmwerchant']; ?>" type='text'>
-<label>Sessionid :</label>
-<input id="sessionid" name="sessionid"  value="<?php echo $_POST['sessionid']; ?>" type='text'>
-<label>SessionVersion :</label>
-<input id="sessionversion" name="sessionversion" value="<?php echo $_POST['sessionversion']; ?>" type='text'>
-<label>SuccessIndicator:</label>
-<input id="successindicator" name="successindicator" value="<?php echo $_POST['successindicator']; ?>"  type='text' value="">
-<label>OrderId:</label>
-<input id="orderid" name="orderid" value="<?php echo $_POST['orderid']; ?>" type='text' value="">
-<input id='btn' name="submit" type='submit' value='Submit'>
 </body>
 
 </html>
