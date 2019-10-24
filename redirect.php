@@ -31,12 +31,15 @@ if ($err) {
 } else {
   //echo $response;
  parse_str($response);
+ session_start();
 $newmwerchant = $merchant;
 $result = $result;
 $sessionid = $session_id;
 $sessionstatus =  $session_updateStatus;
 $sessionversion =  $session_version;
 $successindicator = $successIndicator;
+
+
 }
 ?>
 <html>
