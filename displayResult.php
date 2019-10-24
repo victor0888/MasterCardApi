@@ -1,4 +1,5 @@
 <?php
+session_start();
 /*
  * Copyright (c) 2016 Mastercard
  *
@@ -14,8 +15,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-include '_bootstrap.php';
-inclide 'checkout__BAIDURI_N_950028548_mastercard.php';
+
 ?>
 
 <!DOCTYPE html>
