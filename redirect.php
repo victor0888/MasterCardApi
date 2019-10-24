@@ -1,4 +1,5 @@
  <?php 
+session_start(); # read up on session.auto_start
 $username = "merchant.".$_POST['username'];
 $merchant = $_POST['username'];
 $password = $_POST['password'];
@@ -30,12 +31,13 @@ if ($err) {
 } else {
   //echo $response;
  parse_str($response);
-$newmwerchant = $merchant;
-$result = $result;
-$sessionid = $session_id;
-$sessionstatus =  $session_updateStatus;
-$sessionversion =  $session_version;
-$successindicator = $successIndicator;
+ $_SESSION["a"] = 17;
+$_SESSION["newmwerchant"] = $merchant;
+$_SESSION["result"] = $result;
+$_SESSION["sessionid"] = $session_id;
+$_SESSION["sessionstatus"] =  $session_updateStatus;
+$_SESSION["sessionversion"] =  $session_version;
+$_SESSION["successindicator"] = $successIndicator;
 
 }
 ?>
@@ -46,16 +48,17 @@ $successindicator = $successIndicator;
 </head>
 <body>
 <br><br>
-Hello <?php echo $newmwerchant; ?><br>
-Hello <?php echo $result; ?><br>
-Hello <?php echo $sessionid; ?><br>
-Hello <?php echo $sessionstatus; ?><br>
-Hello <?php echo $sessionversion; ?><br>
-Hello <?php echo $successindicator; ?><br><br>
+Hello <?php echo $_SESSION["a"];?><br>
+Hello <?php echo $_SESSION["newmwerchant"]; ?><br>
+Hello <?php echo $_SESSION["result"]; ?><br>
+Hello <?php echo $_SESSION["sessionid"]; ?><br>
+Hello <?php echo $_SESSION["sessionstatus"]; ?><br>
+Hello <?php echo $_SESSION["sessionversion"]; ?><br>
+Hello <?php echo $_SESSION["successindicator"]; ?><br><br>
  	<a href="hosted_checkout_mastercard.php">Click Here to proceed!</a>
 </body>
  <?php
-session_start(); # read up on session.auto_start
-$_SESSION["a"] = 17;
+
+
  ?>
 </html>
