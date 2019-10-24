@@ -59,7 +59,7 @@ Hello <?php echo $successindicator; ?><br><br>
 <form action="redirect.php" id="#form" method="post" name="#form">
 <label>API Username :</label>
   <label>TEST950029025</label>
-<input id="merchant" name="merchant" value="<?php echo $_POST['newmwerchan']; ?>" type='text'>
+<input id="merchant" name="merchant" value="<?php echo $_POST['newmwerchant']; ?>" type='text'>
 <label>API Password :</label>
   <label>5aa689a4ff28a8d62e12a20e77133134</label>
 <input id="sessionid" name="sessionid"  value="<?php echo $_POST['sessionid']; ?>" type='text'>
