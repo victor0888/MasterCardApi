@@ -27,7 +27,7 @@ session_start(); # read up on session.auto_start
     var sessionId = "<?= $_SESSION["sessionid"]; ?>";
     var sessionVersion = "<?= $_SESSION["sessionversion"]; ?>";
     var successIndicator = "<?= $_SESSION["successindicator"]; ?>";
-    var orderId = "<?= json_encode($orderid);  ?>";
+    var orderId = "<?= $_SESSION["orderid"]; ?>";
     var resultIndicator = null;
 </script> 
 </head> 
@@ -40,6 +40,7 @@ China Union Pay:
 <p id="demo">
 	<br><br>
 Hello <?php echo $_SESSION["a"];?><br>
+Hello <?php echo $_SESSION["orderid"];?><br>
 Hello <?php echo $_SESSION["newmwerchant"]; ?><br>
 Hello <?php echo $_SESSION["result"]; ?><br>
 Hello <?php echo $_SESSION["sessionid"]; ?><br>
