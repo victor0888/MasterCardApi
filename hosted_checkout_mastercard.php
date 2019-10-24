@@ -114,7 +114,7 @@ amount: function() {
 //Dynamic calculation of amount 
 return 80 + 25; 
 }, 
-currency: 'AUD', 
+currency: 'BND', 
 description: 'Ordered goods', 
 id: JSON.stringify(n) 
 }, 
