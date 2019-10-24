@@ -1,4 +1,3 @@
-Learn more or give us feedback
 <?php
 /*
  * Copyright (c) 2016 Mastercard
