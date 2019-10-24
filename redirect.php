@@ -56,13 +56,13 @@ Hello <?php echo $sessionversion; ?><br>
 Hello <?php echo $successindicator; ?><br><br>
 <form action="hosted_checkout_mastercard.php" id="#form" method="post" name="#form">
 <label>Merchant :</label>
-<input id="merchant" name="merchant" value="<?php echo $_POST['newmwerchant']; ?>" type='text'>
+<input id="merchant" name="merchant" value="<?php echo $newmwerchant; ?>" type='text'>
 <label>Sessionid :</label>
-<input id="sessionid" name="sessionid"  value="<?php echo $_POST['sessionid']; ?>" type='text'>
+<input id="sessionid" name="sessionid"  value="<?php echo $sessionid; ?>" type='text'>
 <label>SessionVersion :</label>
-<input id="sessionversion" name="sessionversion" value="<?php echo $_POST['sessionversion']; ?>" type='text'>
+<input id="sessionversion" name="sessionversion" value="<?php echo $sessionversion; ?>" type='text'>
 <label>SuccessIndicator:</label>
-<input id="successindicator" name="successindicator" value="<?php echo $_POST['successindicator']; ?>"  type='text' value="">
+<input id="successindicator" name="successindicator" value="<?php echo $successindicator; ?>"  type='text' value="">
 <label>OrderId:</label>
 <input id="orderid" name="orderid" value="<?php echo $_POST['orderid']; ?>" type='text' value="">
 <input id='btn' name="submit" type='submit' value='Submit'>
