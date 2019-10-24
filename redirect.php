@@ -56,24 +56,18 @@ Hello <?php echo $sessionid; ?><br>
 Hello <?php echo $sessionstatus; ?><br>
 Hello <?php echo $sessionversion; ?><br>
 Hello <?php echo $successindicator; ?><br><br>
-<form action="redirect.php" id="#form" method="post" name="#form">
-<label>API Username :</label>
-  <label>TEST950029025</label>
+<form action="hosted_checkout_mastercard.php" id="#form" method="post" name="#form">
+<label>Merchant :</label>
 <input id="merchant" name="merchant" value="<?php echo $_POST['newmwerchant']; ?>" type='text'>
-<label>API Password :</label>
-  <label>5aa689a4ff28a8d62e12a20e77133134</label>
+<label>Sessionid :</label>
 <input id="sessionid" name="sessionid"  value="<?php echo $_POST['sessionid']; ?>" type='text'>
-<label>Currency :</label>
-  <label>BND</label>
+<label>SessionVersion :</label>
 <input id="sessionversion" name="sessionversion" value="<?php echo $_POST['sessionversion']; ?>" type='text'>
-<label>OrderId:</label>
+<label>SuccessIndicator:</label>
 <input id="successindicator" name="successindicator" value="<?php echo $_POST['successindicator']; ?>"  type='text' value="">
-<label>returnUrl:</label>
+<label>OrderId:</label>
 <input id="orderid" name="orderid" value="<?php echo $_POST['orderid']; ?>" type='text' value="">
 <input id='btn' name="submit" type='submit' value='Submit'>
- 
- 
- <a href="hosted_checkout_mastercard.php" title="">Go and Pay with Hosted Checkout</a>
 </body>
 
 </html>
