@@ -15,7 +15,11 @@
  * limitations under the License.
  */
 include 'redirect.php';
-
+<?php
+# I am file2.php
+session_start(); # read up on session.auto_start
+echo $_SESSION["a"];
+?>
 ?>
 <!DOTYPE html>
 <html> 
