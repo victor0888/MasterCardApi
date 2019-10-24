@@ -22,9 +22,9 @@ include 'redirect.php';
 <!--"https://test-gateway.mastercard.com/checkout/version/47/checkout.js"--> 
 <head> 
 <script type="text/javascript"> 
-    var sessionId = "<?php echo $sessionid; ?>";
-    var sessionVersion = "<?php echo $sessionversion; ?>";
-    var successIndicator = "<?php echo $successindicator; ?>";
+    var sessionId = "<?= $sessionid; ?>";
+    var sessionVersion = "<?= $sessionversion; ?>";
+    var successIndicator = "<?= $successindicator; ?>";
     var orderId = "<?= json_encode($orderid);  ?>";
     var resultIndicator = null;
 </script> 
