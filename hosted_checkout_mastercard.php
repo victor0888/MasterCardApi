@@ -1,4 +1,5 @@
 <?php
+session_start(); # read up on session.auto_start
 /*
  * Copyright (c) 2016 Mastercard
  *
@@ -15,20 +16,119 @@
  * limitations under the License.
  */
 
-# I am file2.php
-session_start(); # read up on session.auto_start
-
 ?>
 <!DOTYPE html>
 <html> 
 <!--"https://test-gateway.mastercard.com/checkout/version/47/checkout.js"--> 
 <head> 
+<script src="https://baiduri-bpgs.mtf.gateway.mastercard.com/checkout/version/46/checkout.js" 
+data-error="errorCallback" 
+data-cancel="cancelCallback" 
+data-complete="completeCallback"
+<!--data-timeout="timeoutCallback"-->
+data-beforeRedirect="Checkout.saveFormFields" 
+data-afterRedirect="Checkout.restoreFormFields"> 
+</script> 
+<script type="text/javascript"> 
+function myFunction() { 
+var x = Math.floor((Math.random() * 100000) + 1000); 
+var n = x.toString(); 
+//var document.getElementById("demo").innerHTML = x; 
+} 
+</script> 
+
 <script type="text/javascript"> 
     var sessionId = "<?= $_SESSION["sessionid"]; ?>";
     var sessionVersion = "<?= $_SESSION["sessionversion"]; ?>";
     var successIndicator = "<?= $_SESSION["successindicator"]; ?>";
     var orderId = "<?= $_SESSION["orderid"]; ?>";
     var resultIndicator = null;
+var x = Math.floor((Math.random() * 100000) + 1000); 
+var n = x.toString(); 
+function errorCallback(error) { 
+console.log("Error: " + JSON.stringify(error)); 
+}
+ /*function timeoutCallback() {
+                //handle payment timeout
+				console.log("Calling timeout."); 
+            };*/
+function cancelCallback() { 
+console.log('Payment cancelled'); 
+confirm('Are you sure you want to cancel?'); 
+} 
+// or if you want to provide a URL: 
+cancelCallback = "http://www.bbc.com/"; 
+    function beforeRedirect() {
+        return {
+            successIndicator: successIndicator,
+            orderId: orderId,
+            sessionId: sessionId,
+            sessionVersion: sessionVersion,
+            merchantId: merchantId
+        };
+    }
+    // This method is specifically for the full payment page option. Because we leave this page and return to it, we need to preserve the
+    // state of successIndicator and orderId using the beforeRedirect/afterRedirect option
+    function afterRedirect(data) {
+        // Compare with the resultIndicator saved in the completeCallback() method
+        if (resultIndicator) {
+            var result = (resultIndicator === data.successIndicator) ? "SUCCESS" : "ERROR";
+            window.location.href = "https://victor-test-app123.herokuapp.com/displayResult.php/" + data.orderId + "/" + result;
+        }
+        else {
+            successIndicator = data.successIndicator;
+            orderId = data.orderId;
+            sessionId = data.sessionId;
+            sessionVersion = data.sessionVersion;
+            merchantId = data.merchantId;
+            window.location.href = "https://victor-test-app123.herokuapp.com/displayResult.php/" + data.orderId + "/" + data.successIndicator + "/" + data.sessionId;
+        }
+//        var result = (resultIndicator === data.successIndicator)   ? "SUCCESS" : "ERROR";
+//        window.location.href = "/hostedCheckout/" + data.orderId + "/" + result;
+    }	
+	
+function completeCallback(response) {
+        // Save the resultIndicator
+		console.log("Calling completecallback"); 
+        resultIndicator = response;
+        var result = (resultIndicator === successIndicator) ? "SUCCESS" : "ERROR";
+		console.log(result); 
+        //location.href = "https://www.google.com";
+		window.location.href = "https://victor-test-app123.herokuapp.com/displayResult.php/" + orderId + "/" + sessionId + "/" + result;
+    }
+var text = Checkout.configure({ 
+merchant:"<?= $_SESSION["newmwerchant"]; ?>",
+//lineOfBusiness:'test_socks',
+//'VICTOR01', 
+//'TESTPAPFACEVAL01', 
+order: { 
+amount: function() { 
+//Dynamic calculation of amount 
+return 80 + 25; 
+}, 
+currency: 'BND', 
+description: 'Ordered goods', 
+id: JSON.stringify(n) 
+}, 
+interaction: {
+//operation: 'PURCHASE', 
+merchant: { 
+'name': 'tessie', 
+address: { 
+line1: '200 Sample St', 
+line2: '1234 Example Town' 
+} 
+} 
+},
+session: {
+		    id: sessionId
+            //version: sessionVersion
+		 }
+ 
+}); 
+obj = JSON.parse(text); 
+document.getElementById("demo2").innerHTML = 
+obj.Checkout.configure.order.id; 
 </script> 
 </head> 
 <body> 
@@ -36,24 +136,13 @@ session_start(); # read up on session.auto_start
 More test cards: <a href="https://baiduri-bpgs.mtf.gateway.mastercard.com/api/documentation/integrationGuidelines/supportedFeatures/testAndGoLive.html?locale=en_US" target="_blank">Click here<a/><br>
 China Union Pay: 
 <a href="https://baiduri-bpgs.mtf.gateway.mastercard.com/api/documentation/integrationGuidelines/supportedFeatures/pickPaymentMethod/browserPayments/testDetails.html?locale=en_US#x_SecurePayTest" target="_blank">Click for test cards<a/><br>
+<input type="button" value="Pay with Lightbox" onclick="Checkout.showLightbox();" /> 
+<input type="button" value="Pay with Payment Page" onclick="Checkout.showPaymentPage();" /> 
+... 
+<button onclick="myFunction()">Try it</button> 
 
-<p id="demo">
-	<br><br>
-Hello <?php echo $_SESSION["a"];?><br>
-Hello <?php echo $_SESSION["orderid"];?><br>
-Hello <?php echo $_SESSION["newmwerchant"]; ?><br>
-Hello <?php echo $_SESSION["result"]; ?><br>
-Hello <?php echo $_SESSION["sessionid"]; ?><br>
-Hello <?php echo $_SESSION["sessionstatus"]; ?><br>
-Hello <?php echo $_SESSION["sessionversion"]; ?><br>
-Hello <?php echo $_SESSION["successindicator"]; ?><br><br>
-	</p> 
+<p id="demo"></p> 
 
-<p id="demo2">
-<script type="text/javascript">
-document.write(sessionId);
-</script>
-	</p> 
+<p id="demo2"></p> 
 </body> 
 </html> 
-
