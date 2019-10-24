@@ -59,6 +59,4 @@ document.write(sessionId);
 	</p> 
 </body> 
 </html> 
-<?php
-	session_destroy()
-?>
+
