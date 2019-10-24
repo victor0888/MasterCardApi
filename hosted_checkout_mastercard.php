@@ -15,24 +15,18 @@
  * limitations under the License.
  */
 include '_bootstrap.php';
+include 'redirect.php';
 
-$newmwerchantH = $_POST['newmwerchant'];
-$resultH; = $_POST['$result'];
-$sessionidH = $_POST['sessionid'];
-$sessionstatusH = $_POST['sessionstatus'];
-$sessionversionH = $_POST['sessionversion'];
-$successindicatorH = $_POST['successindicator'];
-$orderidH = $_POST['orderid'];
 ?>
 <!DOTYPE html>
 <html> 
 <!--"https://test-gateway.mastercard.com/checkout/version/47/checkout.js"--> 
 <head> 
 <script type="text/javascript"> 
-    var sessionId = "<?= json_encode($sessionidH); ?>";
-    var sessionVersion = "<?= json_encode($sessionversionH); ?>";
-    var successIndicator = "<?= json_encode($successindicatorH); ?>";
-    var orderId = "<?= json_encode($orderidH);  ?>";
+    var sessionId = "<?php echo $sessionid; ?>";
+    var sessionVersion = "<?php echo $sessionversion; ?>";
+    var successIndicator = "<?php echo $successindicator; ?>";
+    var orderId = "<?= json_encode($orderid);  ?>";
     var resultIndicator = null;
 </script> 
 </head> 
@@ -44,12 +38,12 @@ China Union Pay:
 
 <p id="demo">
 	<br><br>
-Hello <?php echo $newmwerchantH; ?><br>
-Hello <?php echo $resultH; ?><br>
-Hello <?php echo $sessionidH; ?><br>
-Hello <?php echo $sessionstatusH; ?><br>
-Hello <?php echo $sessionversionH; ?><br>
-Hello <?php echo $successindicatorH; ?><br>
+Hello <?php echo $newmwerchant; ?><br>
+Hello <?php echo $result; ?><br>
+Hello <?php echo $sessionid; ?><br>
+Hello <?php echo $sessionstatus; ?><br>
+Hello <?php echo $sessionversion; ?><br>
+Hello <?php echo $successindicator; ?><br><br>
 	</p> 
 
 <p id="demo2">
