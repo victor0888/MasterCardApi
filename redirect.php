@@ -42,8 +42,12 @@ $_SESSION['newmwerchant'];
 
 }
 ?>
+<!DOCTYPE html>
 <html>
-
+ <head>
+<meta content="noindex, nofollow" name="robots">
+<link href='redirect_form.css' rel='stylesheet' type='text/css'> <!--== Include CSS File Here ==-->
+</head>
 <body>
 <br><br>
 Hello <?php echo $newmwerchant; ?><br>
@@ -51,7 +55,24 @@ Hello <?php echo $result; ?><br>
 Hello <?php echo $sessionid; ?><br>
 Hello <?php echo $sessionstatus; ?><br>
 Hello <?php echo $sessionversion; ?><br>
-Hello <?php echo $successindicator; ?><br>
+Hello <?php echo $successindicator; ?><br><br>
+<form action="redirect.php" id="#form" method="post" name="#form">
+<label>API Username :</label>
+  <label>TEST950029025</label>
+<input id="merchant" name="merchant" value="<?php echo $_POST['newmwerchan']; ?>" type='text'>
+<label>API Password :</label>
+  <label>5aa689a4ff28a8d62e12a20e77133134</label>
+<input id="sessionid" name="sessionid"  value="<?php echo $_POST['sessionid']; ?>" type='text'>
+<label>Currency :</label>
+  <label>BND</label>
+<input id="sessionversion" name="sessionversion" value="<?php echo $_POST['sessionversion']; ?>" type='text'>
+<label>OrderId:</label>
+<input id="successindicator" name="successindicator" value="<?php echo $_POST['successindicator']; ?>"  type='text' value="">
+<label>returnUrl:</label>
+<input id="orderid" name="orderid" value="<?php echo $_POST['orderid']; ?>" type='text' value="">
+<input id='btn' name="submit" type='submit' value='Submit'>
+ 
+ 
  <a href="hosted_checkout_mastercard.php" title="">Go and Pay with Hosted Checkout</a>
 </body>
 
