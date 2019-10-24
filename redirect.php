@@ -32,6 +32,7 @@ if ($err) {
   //echo $response;
  parse_str($response);
  $_SESSION["a"] = 17;
+$_SESSION["orderid"] = $orderid;
 $_SESSION["newmwerchant"] = $merchant;
 $_SESSION["result"] = $result;
 $_SESSION["sessionid"] = $session_id;
@@ -49,6 +50,7 @@ $_SESSION["successindicator"] = $successIndicator;
 <body>
 <br><br>
 Hello <?php echo $_SESSION["a"];?><br>
+Hello <?php echo $_SESSION["orderid"];?><br>
 Hello <?php echo $_SESSION["newmwerchant"]; ?><br>
 Hello <?php echo $_SESSION["result"]; ?><br>
 Hello <?php echo $_SESSION["sessionid"]; ?><br>
