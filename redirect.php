@@ -38,7 +38,7 @@ $sessionid = $session_id;
 $sessionstatus =  $session_updateStatus;
 $sessionversion =  $session_version;
 $successindicator = $successIndicator;
-
+$_SESSION['newmwerchant'];
 
 }
 ?>
