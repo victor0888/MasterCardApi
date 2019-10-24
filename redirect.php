@@ -52,7 +52,7 @@ Hello <?php echo $sessionid; ?><br>
 Hello <?php echo $sessionstatus; ?><br>
 Hello <?php echo $sessionversion; ?><br>
 Hello <?php echo $successindicator; ?><br>
- <a href="checkout__BAIDURI_N_950028548_mastercard.php" title="">Go and Pay with Hosted Checkout</a>
+ <a href="hosted_checkout_mastercard.php" title="">Go and Pay with Hosted Checkout</a>
 </body>
 
 </html>
