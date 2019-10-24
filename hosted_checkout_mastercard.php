@@ -50,6 +50,7 @@ var n = x.toString();
     var sessionVersion = "<?= json_encode($sessionversionH); ?>";
     var successIndicator = "<?= json_encode($successindicatorH); ?>";
     var orderId = "<?= json_encode($orderidH);  ?>";
+    var resultIndicator = null;
 var x = Math.floor((Math.random() * 100000) + 1000); 
 var n = x.toString(); 
 function errorCallback(error) { 
