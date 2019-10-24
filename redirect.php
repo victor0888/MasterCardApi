@@ -53,6 +53,7 @@ Hello <?php echo $sessionid; ?><br>
 Hello <?php echo $sessionstatus; ?><br>
 Hello <?php echo $sessionversion; ?><br>
 Hello <?php echo $successindicator; ?><br><br>
+ 	<a href="hosted_checkout_mastercard.php">Click Here to proceed!</a>
 </body>
 
 </html>
