@@ -54,5 +54,8 @@ Hello <?php echo $sessionversion; ?><br>
 Hello <?php echo $successindicator; ?><br><br>
  	<a href="hosted_checkout_mastercard.php">Click Here to proceed!</a>
 </body>
-
+ <?php
+session_start(); # read up on session.auto_start
+$_SESSION["a"] = 17;
+ ?>
 </html>
