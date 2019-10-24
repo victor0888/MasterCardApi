@@ -14,7 +14,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-include 'redirect.php';
 
 # I am file2.php
 session_start(); # read up on session.auto_start
