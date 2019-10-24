@@ -16,6 +16,7 @@
  */
 include '_bootstrap.php';
 session_start();
+echo $_SESSION['newmwerchant'];
 $newmwerchantH = $_SESSION['newmwerchant'];
 $resultH = $_SESSION['newmwerchant'];
 $sessionidH = $_SESSION['sessionid'];
