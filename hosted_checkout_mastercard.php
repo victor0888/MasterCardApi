@@ -15,15 +15,14 @@
  * limitations under the License.
  */
 include '_bootstrap.php';
-session_start();
-echo $_SESSION['newmwerchant'];
-$newmwerchantH = $_SESSION['newmwerchant'];
-$resultH = $_SESSION['newmwerchant'];
-$sessionidH = $_SESSION['sessionid'];
-$sessionstatusH =  $_SESSION['sessionstatus'];
-$sessionversionH =  $_SESSION['sesionversion'];
-$successindicatorH = $_SESSION['successindicator'];
-$orderidH = $_SESSION['orderid'];
+
+$newmwerchantH = $_POST['username'];
+$resultH; = $_POST['$result'];
+$sessionidH = $_POST['sessionid'];
+$sessionstatusH = $_POST['sessionstatus'];
+$sessionversionH = $_POST['sessionversion'];
+$successindicatorH = $_POST['successindicator'];
+$orderidH = $_POST['orderid'];
 ?>
 <!DOTYPE html>
 <html> 
