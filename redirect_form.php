@@ -16,6 +16,9 @@
   <label>Gateway API Version :</label>
 <label>50</label>
 <input id="version" name="version" value="<?php echo $_POST['version']; ?>" placeholder='50' type='text'>
+  <label>Gateway API Operation :</label>
+ <label>PURCHASE or AUTHORIZE </label>
+<input id="operation" name="operation" value="<?php echo $_POST['operation']; ?>" placeholder='PURCHASE' type='text'> 
 <label>API Username :</label>
   <label>TESTVICTOR01</label>
 <input id="username" name="username" value="<?php echo $_POST['username']; ?>" placeholder='Your API Username' type='text'>
