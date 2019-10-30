@@ -1,5 +1,7 @@
  <?php 
 session_start(); # read up on session.auto_start
+$url = $_POST['url'];
+$version = $_POST['version'];
 $username = "merchant.".$_POST['username'];
 $merchant = $_POST['username'];
 $password = $_POST['password'];
@@ -8,7 +10,7 @@ $orderid = $_POST['orderid'];
 $returnUrl = $_POST['returnUrl'];
 $curl = curl_init();
 curl_setopt_array($curl, array(
-  CURLOPT_URL => "https://baiduri-bpgs.mtf.gateway.mastercard.com/api/nvp/version/46",
+  CURLOPT_URL => "https://$url/api/nvp/version/$version",
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 100,
