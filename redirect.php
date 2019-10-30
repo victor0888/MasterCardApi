@@ -2,6 +2,7 @@
 session_start(); # read up on session.auto_start
 $url = $_POST['url'];
 $version = $_POST['version'];
+$operation = $_POST['operation'];
 $username = "merchant.".$_POST['username'];
 $merchant = $_POST['username'];
 $password = $_POST['password'];
@@ -17,7 +18,7 @@ curl_setopt_array($curl, array(
   CURLOPT_TIMEOUT => 300,
   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
   CURLOPT_CUSTOMREQUEST => "POST",
-  CURLOPT_POSTFIELDS => "apiOperation=CREATE_CHECKOUT_SESSION&merchant=$merchant&apiUsername=$username&apiPassword=$password&order.currency=$currency&order.id=$orderid&order.amount=45",
+  CURLOPT_POSTFIELDS => "apiOperation=CREATE_CHECKOUT_SESSION&merchant=$merchant&apiUsername=$username&apiPassword=$password&order.currency=$currency&interaction.operation=$operation&order.id=$orderid&order.amount=45",
   CURLOPT_HTTPHEADER => array(
     "Authorization: Basic bWVyY2hhbnQuVEVTVFZJQ1RFU05BQjAxOmU5NmYyYjA0YzI4ZGRmN2FhOWZhYjFhYjQ1NGNkNzc1",
     "Content-Type: application/x-www-form-urlencoded",
