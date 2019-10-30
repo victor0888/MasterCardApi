@@ -17,12 +17,15 @@ session_start(); # read up on session.auto_start
  */
 $urlh = $_SESSION["url"];
 $versionh = $_SESSION["version"];
+$fullurl = "https://$urlh//checkout/version/$versionh/checkout.js";
 ?>
 <!DOTYPE html>
 <html> 
 <!--"https://test-gateway.mastercard.com/checkout/version/47/checkout.js"--> 
 <head> 
-<script src="https://<?php echo '.$urlh.'?>/checkout/version/<?php echo '.$versionh.'?>/checkout.js" 
+<script type="text/javascript"> var url = "<?= $fullurl; ?>";  
+	</script>
+<script src="<?=$fullurl?>" 
 data-error="errorCallback" 
 data-cancel="cancelCallback" 
 data-complete="completeCallback"
@@ -134,10 +137,11 @@ obj.Checkout.configure.order.id;
 </script> 
 </head> 
 <body> 
+	
 ... Master card: 5123450000000008<br>
-More test cards: <a href="https://<?php echo '.$urlh.'?>/api/documentation/integrationGuidelines/supportedFeatures/testAndGoLive.html?locale=en_US" target="_blank">Click here<a/><br>
+More test cards: <a href="https://test-gateway.mastercard.com/api/documentation/integrationGuidelines/supportedFeatures/testAndGoLive.html?locale=en_US" id='mylink' target="_blank">Click here<a/><br>
 China Union Pay: 
-<a href="https://<?php echo '.$urlh.'?>/integrationGuidelines/supportedFeatures/pickPaymentMethod/browserPayments/testDetails.html?locale=en_US#x_SecurePayTest" target="_blank">Click for test cards<a/><br>
+<a href="https://test-gateway.mastercard.com/integrationGuidelines/supportedFeatures/pickPaymentMethod/browserPayments/testDetails.html?locale=en_US#x_SecurePayTest" id='mylink' target="_blank">Click for test cards<a/><br>
 <input type="button" value="Pay with Lightbox" onclick="Checkout.showLightbox();" /> 
 <input type="button" value="Pay with Payment Page" onclick="Checkout.showPaymentPage();" /> 
 ... 
