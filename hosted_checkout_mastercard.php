@@ -135,9 +135,9 @@ obj.Checkout.configure.order.id;
 </head> 
 <body> 
 ... Master card: 5123450000000008<br>
-More test cards: <a href="https://"<?= $_SESSION["url"]; ?>"/api/documentation/integrationGuidelines/supportedFeatures/testAndGoLive.html?locale=en_US" target="_blank">Click here<a/><br>
+More test cards: <a href="https://<?= $urlh; ?>/api/documentation/integrationGuidelines/supportedFeatures/testAndGoLive.html?locale=en_US" target="_blank">Click here<a/><br>
 China Union Pay: 
-<a href="https://"<?= $_SESSION["url"]; ?>"/integrationGuidelines/supportedFeatures/pickPaymentMethod/browserPayments/testDetails.html?locale=en_US#x_SecurePayTest" target="_blank">Click for test cards<a/><br>
+<a href="https://<?= $urlh; ?>/integrationGuidelines/supportedFeatures/pickPaymentMethod/browserPayments/testDetails.html?locale=en_US#x_SecurePayTest" target="_blank">Click for test cards<a/><br>
 <input type="button" value="Pay with Lightbox" onclick="Checkout.showLightbox();" /> 
 <input type="button" value="Pay with Payment Page" onclick="Checkout.showPaymentPage();" /> 
 ... 
