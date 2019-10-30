@@ -21,7 +21,7 @@ session_start(); # read up on session.auto_start
 <html> 
 <!--"https://test-gateway.mastercard.com/checkout/version/47/checkout.js"--> 
 <head> 
-<script src="https://baiduri-bpgs.mtf.gateway.mastercard.com/checkout/version/46/checkout.js" 
+<script src="https://"<?= $_SESSION["url"]; ?>"/checkout/version/"<?= $_SESSION["version"]; ?>/checkout.js" 
 data-error="errorCallback" 
 data-cancel="cancelCallback" 
 data-complete="completeCallback"
@@ -98,6 +98,7 @@ function completeCallback(response) {
     }
 var text = Checkout.configure({ 
 merchant:"<?= $_SESSION["newmwerchant"]; ?>",
+operation: "<?= $_SESSION["operation"]; ?>",					    
 //lineOfBusiness:'test_socks',
 //'VICTOR01', 
 //'TESTPAPFACEVAL01', 
@@ -133,9 +134,9 @@ obj.Checkout.configure.order.id;
 </head> 
 <body> 
 ... Master card: 5123450000000008<br>
-More test cards: <a href="https://baiduri-bpgs.mtf.gateway.mastercard.com/api/documentation/integrationGuidelines/supportedFeatures/testAndGoLive.html?locale=en_US" target="_blank">Click here<a/><br>
+More test cards: <a href="https://"<?= $_SESSION["url"]; ?>"/api/documentation/integrationGuidelines/supportedFeatures/testAndGoLive.html?locale=en_US" target="_blank">Click here<a/><br>
 China Union Pay: 
-<a href="https://baiduri-bpgs.mtf.gateway.mastercard.com/api/documentation/integrationGuidelines/supportedFeatures/pickPaymentMethod/browserPayments/testDetails.html?locale=en_US#x_SecurePayTest" target="_blank">Click for test cards<a/><br>
+<a href="https://"<?= $_SESSION["url"]; ?>"/integrationGuidelines/supportedFeatures/pickPaymentMethod/browserPayments/testDetails.html?locale=en_US#x_SecurePayTest" target="_blank">Click for test cards<a/><br>
 <input type="button" value="Pay with Lightbox" onclick="Checkout.showLightbox();" /> 
 <input type="button" value="Pay with Payment Page" onclick="Checkout.showPaymentPage();" /> 
 ... 
