@@ -101,8 +101,7 @@ function completeCallback(response) {
 		window.location.href = "https://victor-test-app123.herokuapp.com/displayResult.php/" + orderId + "/" + sessionId + "/" + result;
     }
 var text = Checkout.configure({ 
-merchant:"<?= $_SESSION["newmwerchant"]; ?>",
-operation: "<?= $_SESSION["operation"]; ?>",					    
+merchant:"<?= $_SESSION["newmwerchant"]; ?>",					    
 //lineOfBusiness:'test_socks',
 //'VICTOR01', 
 //'TESTPAPFACEVAL01', 
@@ -116,7 +115,7 @@ description: 'Ordered goods',
 id: JSON.stringify(n) 
 }, 
 interaction: {
-//operation: 'PURCHASE', 
+operation: "<?= $_SESSION["operation"]; ?>", 
 merchant: { 
 'name': 'tessie', 
 address: { 
