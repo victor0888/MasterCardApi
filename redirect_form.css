@@ -12,13 +12,13 @@ margin-left:65px
 }
 div.main {
 width:960px;
-height:655px;
+height:auto;
 margin:50px auto;
 font-family:'Droid Serif',serif
 }
 div.first {
 width:380px;
-height:570px;
+height:auto;
 float:left;
 padding:15px 50px;
 background:#f8f8ff;
