@@ -36,5 +36,3 @@
 </div>
 </body>
 </html>
-
-<span><?php echo $username;?></span> 
