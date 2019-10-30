@@ -14,8 +14,8 @@
   <label>test-gateway.mastercard.com</label>
 <input id="url" name="url" value="<?php echo $_POST['url']; ?>" placeholder='test-gateway.mastercard.com' type='text'>
   <label>Gateway API Version :</label>
-<label>50</label>
-<input id="version" name="version" value="<?php echo $_POST['version']; ?>" placeholder='50' type='text'>
+<label>52</label>
+<input id="version" name="version" value="<?php echo $_POST['version']; ?>" placeholder='52' type='text'>
   <label>Gateway API Operation :</label>
  <label>PURCHASE or AUTHORIZE </label>
 <input id="operation" name="operation" value="<?php echo $_POST['operation']; ?>" placeholder='PURCHASE' type='text'> 
