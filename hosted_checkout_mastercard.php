@@ -25,7 +25,7 @@ $fullurl = "https://$urlh/checkout/version/$versionh/checkout.js";
 <head> 
 <script type="text/javascript"> var url = "<?= $fullurl; ?>";  
 	</script>
-<script src="<?=$fullurl?>" 
+<script src="https://test-gateway.mastercard.com/checkout/version/52/checkout.js"" 
 data-error="errorCallback" 
 data-cancel="cancelCallback" 
 data-complete="completeCallback"
