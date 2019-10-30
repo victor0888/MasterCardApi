@@ -21,7 +21,7 @@ session_start(); # read up on session.auto_start
 <html> 
 <!--"https://test-gateway.mastercard.com/checkout/version/47/checkout.js"--> 
 <head> 
-<script src="https://<?= $_SESSION["url"]; ?>/checkout/version/<?= $_SESSION["version"]; ?>/checkout.js" 
+<script src="https://"<?= $_SESSION["url"]; ?>"/checkout/version/"<?= $_SESSION["version"]; ?>"/checkout.js" 
 data-error="errorCallback" 
 data-cancel="cancelCallback" 
 data-complete="completeCallback"
