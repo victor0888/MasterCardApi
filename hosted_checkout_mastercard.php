@@ -15,13 +15,14 @@ session_start(); # read up on session.auto_start
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
+$urlh = $_SESSION["url"];
+$versionh = $_SESSION["version"];
 ?>
 <!DOTYPE html>
 <html> 
 <!--"https://test-gateway.mastercard.com/checkout/version/47/checkout.js"--> 
 <head> 
-<script src="https://"<?= $_SESSION["url"]; ?>"/checkout/version/"<?= $_SESSION["version"]; ?>"/checkout.js" 
+<script src="https://<?= $urlh; ?>/checkout/version/<?= $versionh; ?>/checkout.js" 
 data-error="errorCallback" 
 data-cancel="cancelCallback" 
 data-complete="completeCallback"
