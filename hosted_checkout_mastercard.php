@@ -17,7 +17,7 @@ session_start(); # read up on session.auto_start
  */
 $urlh = $_SESSION["url"];
 $versionh = $_SESSION["version"];
-$fullurl = "https://test-gateway.mastercard.com/checkout/version/52/checkout.js";
+$fullurl = "https://test-gateway.mastercard.com/checkout/version/$versionh/checkout.js";
 ?>
 <!DOTYPE html>
 <html> 
@@ -128,7 +128,7 @@ obj.Checkout.configure.order.id;
 </script> 
 </head> 
 <body> 
-<?php echo $version;?><br>	
+<?php echo $versionh;?><br>	
 ... Master card: 5123450000000008<br>
 More test cards: <a href="https://test-gateway.mastercard.com/api/documentation/integrationGuidelines/supportedFeatures/testAndGoLive.html?locale=en_US" id='mylink' target="_blank">Click here<a/><br>
 China Union Pay: 
