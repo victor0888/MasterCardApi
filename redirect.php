@@ -61,8 +61,6 @@ Hello <?php echo $_SESSION["result"]; ?><br>
 Hello <?php echo $_SESSION["sessionid"]; ?><br>
 Hello <?php echo $_SESSION["sessionstatus"]; ?><br>
 Hello <?php echo $_SESSION["sessionversion"]; ?><br>
-Hello <?php echo $_SESSION["url"]; ?><br>
-Hello <?php echo $_SESSION["version"]; ?><br>
 Hello <?php echo $_SESSION["successindicator"]; ?><br><br>
  	<a href="hosted_checkout_mastercard.php">Click Here to proceed!</a>
 </body>
