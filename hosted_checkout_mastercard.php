@@ -17,24 +17,15 @@ session_start(); # read up on session.auto_start
  */
 $urlh = $_SESSION["url"];
 $versionh = $_SESSION["version"];
-$fullurl = "https://$urlh/checkout/version/$versionh/checkout.js";
+$fullurl = "https://test-gateway.mastercard.com/checkout/version/$versionh/checkout.js";
 ?>
 <!DOTYPE html>
 <html> 
 <!--"https://test-gateway.mastercard.com/checkout/version/47/checkout.js"--> 
 
 <head>
-<script type="text/javascript">
-var newurl = "<? echo $fullurl; ?>";
-if (newurl == "test-gateway.mastercard.com") {
-    //document.getElementById('dynamicjs').src = 'https://test-gateway.mastercard.com/checkout/version/52/checkout.js';
-	newurl = 'https://test-gateway.mastercard.com/checkout/version/52/checkout.js';
-}
-   // document.write("<script src='" + newurl + "' data-error="errorCallback" data-cancel="cancelCallback" data-complete="completeCallback" data-afterRedirect="Checkout.restoreFormFields" ></scr" + "ipt>");
-	
-	
-</script>
-<script id="dynamicjs" src='" + newurl + "' 
+
+<script id="dynamicjs" src="<?php echo $fullurl; ?>" 
 data-error="errorCallback" 
 data-cancel="cancelCallback" 
 data-complete="completeCallback"-
