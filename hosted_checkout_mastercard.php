@@ -17,7 +17,7 @@ session_start(); # read up on session.auto_start
  */
 $urlh = $_SESSION["url"];
 $versionh = $_SESSION["version"];
-$fullurl = $urlh."https://"$urlh."/checkout/version/".$versionh."/checkout.js";
+$fullurl = "https://".$urlh."/checkout/version/".$versionh."/checkout.js";
 ?>
 <!DOTYPE html>
 <html> 
