@@ -17,7 +17,7 @@ session_start(); # read up on session.auto_start
  */
 $urlh = $_SESSION["url"];
 $versionh = $_SESSION["version"];
-$fullurl = "https://test-gateway.mastercard.com/checkout/version/$versionh/checkout.js";
+$fullurl = "https://test-gateway.mastercard.com/checkout/version/52/checkout.js";
 ?>
 <!DOTYPE html>
 <html> 
