@@ -25,7 +25,7 @@ $fullurl = "https://$urlh/checkout/version/$versionh/checkout.js";
 
 <head>
 <script type="text/javascript">
-var newurl = "<?= $fullurl; ?>";
+var newurl = "<? echo $fullurl; ?>";
 if (newurl == "test-gateway.mastercard.com") {
     //document.getElementById('dynamicjs').src = 'https://test-gateway.mastercard.com/checkout/version/52/checkout.js';
 	newurl = 'https://test-gateway.mastercard.com/checkout/version/52/checkout.js';
