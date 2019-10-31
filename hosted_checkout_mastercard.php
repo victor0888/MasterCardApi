@@ -24,7 +24,7 @@ $fullurl = "https://$urlh/checkout/version/$versionh/checkout.js";
 <!--"https://test-gateway.mastercard.com/checkout/version/47/checkout.js"--> 
 
 <head> 
-<script id="dynamicjs" src="https://ap-gateway.mastercard.com/checkout/version/52/checkout.js"
+<script id="dynamicjs" src=""
 data-error="errorCallback" 
 data-cancel="cancelCallback" 
 data-complete="completeCallback"
