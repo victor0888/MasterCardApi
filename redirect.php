@@ -44,6 +44,8 @@ $_SESSION["sessionversion"] =  $session_version;
 $_SESSION["successindicator"] = $successIndicator;
 
 }
+$_SESSION["url"] = $url;
+$_SESSION["version"] = $version;
 ?>
 <!DOCTYPE html>
 <html>
