@@ -22,6 +22,8 @@ $fullurl = "https://$urlh/checkout/version/$versionh/checkout.js";
 <!DOTYPE html>
 <html> 
 <!--"https://test-gateway.mastercard.com/checkout/version/47/checkout.js"--> 
+
+<head> 
 <script type="text/javascript">
 var head=document.getElementsByTagName('head')[0]
 var script=document.createElement('script')
@@ -33,9 +35,8 @@ script.setAttribute('data-complete', "completeCallback")
 script.setAttribute('data-beforeRedirect', "Checkout.saveFormFields")
 script.setAttribute('data-afterRedirect', "Checkout.restoreFormFields")
 head.appendChild(script)
+	
 </script>
-<head> 
-
 <!--<script src="https://test-gateway.mastercard.com/checkout/version/52/checkout.js"
 data-error="errorCallback" 
 data-cancel="cancelCallback" 
