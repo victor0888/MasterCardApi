@@ -24,21 +24,20 @@ $fullurl = "https://$urlh/checkout/version/$versionh/checkout.js";
 <!--"https://test-gateway.mastercard.com/checkout/version/47/checkout.js"--> 
 
 <head> 
-<script src="https://test-gateway.mastercard.com/checkout/version/52/checkout.js"
+<script id="dynamicjs" src="https://ap-gateway.mastercard.com/checkout/version/52/checkout.js"
 data-error="errorCallback" 
 data-cancel="cancelCallback" 
 data-complete="completeCallback"
 <!--data-timeout="timeoutCallback"-->
 <!--data-beforeRedirect="Checkout.saveFormFields" 
 data-afterRedirect="Checkout.restoreFormFields"> 
-</script> 
-<script type="text/javascript"> 
-function myFunction() { 
-var x = Math.floor((Math.random() * 100000) + 1000); 
-var n = x.toString(); 
-//var document.getElementById("demo").innerHTML = x; 
-} 
-</script> 
+</script>
+<script type="text/javascript">
+var newurl = "<?= $fullurl; ?>";
+if (newurl == "test-gateway.mastercard.com") {
+    document.getElementById('dynamicjs').src = 'https://test-gateway.mastercard.com/checkout/version/52/checkout.js';
+}
+</script>
 
 <script type="text/javascript"> 
     var sessionId = "<?= $_SESSION["sessionid"]; ?>";
