@@ -24,9 +24,14 @@ $fullurl = "https://$urlh/checkout/version/$versionh/checkout.js";
 <!--"https://test-gateway.mastercard.com/checkout/version/47/checkout.js"--> 
 
 <head>
+<script type="text/javascript">
+var newurl = "<?= $fullurl; ?>";
+if (newurl == "test-gateway.mastercard.com") {
+    //document.getElementById('dynamicjs').src = 'https://test-gateway.mastercard.com/checkout/version/52/checkout.js';
+	newurl = 'https://test-gateway.mastercard.com/checkout/version/52/checkout.js';
+}
 
-
-<script id="dynamicjs" src=""
+<script id="dynamicjs" src="newurl"
 data-error="errorCallback" 
 data-cancel="cancelCallback" 
 data-complete="completeCallback"
@@ -34,11 +39,7 @@ data-complete="completeCallback"
 <!--data-beforeRedirect="Checkout.saveFormFields" 
 data-afterRedirect="Checkout.restoreFormFields"> 
 </script>
-<script type="text/javascript">
-var newurl = "<?= $fullurl; ?>";
-if (newurl == "test-gateway.mastercard.com") {
-    document.getElementById('dynamicjs').src = 'https://test-gateway.mastercard.com/checkout/version/52/checkout.js';
-}
+
 </script>
 <script type="text/javascript"> 
     var sessionId = "<?= $_SESSION["sessionid"]; ?>";
