@@ -22,17 +22,28 @@ $fullurl = "https://$urlh/checkout/version/$versionh/checkout.js";
 <!DOTYPE html>
 <html> 
 <!--"https://test-gateway.mastercard.com/checkout/version/47/checkout.js"--> 
+<script type="text/javascript">
+var head=document.getElementsByTagName('head')[0]
+var script=document.createElement('script')
+script.setAttribute('type', 'text/javascript')
+script.setAttribute('src', "https://test-gateway.mastercard.com/checkout/version/52/checkout.js")
+script.setAttribute('data-error', "errorCallback")
+script.setAttribute('data-cancel', "cancelCallback")
+script.setAttribute('data-complete', "completeCallback")
+script.setAttribute('data-beforeRedirect', "Checkout.saveFormFields")
+script.setAttribute('data-afterRedirect', "Checkout.restoreFormFields")
+head.appendChild(script)
+</script>
 <head> 
-<script type="text/javascript"> var url = "<?= $fullurl; ?>";  
-	</script>
-<script src="https://test-gateway.mastercard.com/checkout/version/52/checkout.js"" 
+
+<!--<script src="https://test-gateway.mastercard.com/checkout/version/52/checkout.js"
 data-error="errorCallback" 
 data-cancel="cancelCallback" 
-data-complete="completeCallback"
+data-complete="completeCallback"-->
 <!--data-timeout="timeoutCallback"-->
-data-beforeRedirect="Checkout.saveFormFields" 
+<!--data-beforeRedirect="Checkout.saveFormFields" 
 data-afterRedirect="Checkout.restoreFormFields"> 
-</script> 
+</script> -->
 <script type="text/javascript"> 
 function myFunction() { 
 var x = Math.floor((Math.random() * 100000) + 1000); 
