@@ -127,8 +127,7 @@ document.getElementById("demo2").innerHTML =
 obj.Checkout.configure.order.id; 
 </script> 
 </head> 
-<body> 
-<?php echo $versionh;?><br>	
+<body> 	
 ... Master card: 5123450000000008<br>
 More test cards: <a href="https://test-gateway.mastercard.com/api/documentation/integrationGuidelines/supportedFeatures/testAndGoLive.html?locale=en_US" id='mylink' target="_blank">Click here<a/><br>
 China Union Pay: 
