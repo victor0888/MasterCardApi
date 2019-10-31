@@ -25,7 +25,7 @@ $fullurl = "https://$urlh/checkout/version/$versionh/checkout.js";
 
 <head>
 
-</script>
+
 <script id="dynamicjs" src=""
 data-error="errorCallback" 
 data-cancel="cancelCallback" 
@@ -39,7 +39,7 @@ var newurl = "<?= $fullurl; ?>";
 if (newurl == "test-gateway.mastercard.com") {
     document.getElementById('dynamicjs').src = 'https://test-gateway.mastercard.com/checkout/version/52/checkout.js';
 }
-
+</script>
 <script type="text/javascript"> 
     var sessionId = "<?= $_SESSION["sessionid"]; ?>";
     var sessionVersion = "<?= $_SESSION["sessionversion"]; ?>";
