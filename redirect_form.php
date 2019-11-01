@@ -23,7 +23,6 @@
   <label>TESTVICTOR01</label>
 <input id="username" name="username" value="<?php echo $_POST['username']; ?>" placeholder='Your API Username' type='text'>
 <label>API Password :</label>
-  <label>cef2d7619cf1535c6b5320ee277a88ed</label>
 <input id="password" name="password"  value="<?php echo $_POST['password']; ?>" placeholder='Valid API Password' type='text'>
 <label>Currency :</label>
   <label>AUD</label>
