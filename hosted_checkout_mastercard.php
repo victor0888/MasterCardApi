@@ -18,6 +18,8 @@ session_start(); # read up on session.auto_start
 $urlh = $_SESSION["url"];
 $versionh = $_SESSION["version"];
 $fullurl = "https://".$urlh."/checkout/version/".$versionh."/checkout.js";
+$testcardlink = "https://".$urlh."/api/documentation/integrationGuidelines/supportedFeatures/testAndGoLive.html?locale=en_US";
+$cuptestcardlink = "https://".$urlh."/api/documentation/integrationGuidelines/supportedFeatures/pickPaymentMethod/browserPayments/testDetails.html?locale=en_US#x_SecurePayTest";
 ?>
 <!DOTYPE html>
 <html> 
@@ -129,9 +131,9 @@ obj.Checkout.configure.order.id;
 </head> 
 <body> 	
 ... Master card: 5123450000000008<br>
-More test cards: <a href="https://"<?php echo $urlh; ?>"/api/documentation/integrationGuidelines/supportedFeatures/testAndGoLive.html?locale=en_US" id='mylink' target="_blank">Click here<a/><br>
+More test cards: <a href="<?php echo $testcardlink; ?>" id='mylink' target="_blank">Click here<a/><br>
 China Union Pay: 
-<a href="https://"<?php echo $urlh; ?>"/api/documentation/integrationGuidelines/supportedFeatures/pickPaymentMethod/browserPayments/testDetails.html?locale=en_US#x_SecurePayTest" id='mylink' target="_blank">Click for test cards<a/><br>
+<a href="<?php echo $cuptestcardlink; ?>" id='mylink' target="_blank">Click for test cards<a/><br>
 <input type="button" value="Pay with Lightbox" onclick="Checkout.showLightbox();" /> 
 <input type="button" value="Pay with Payment Page" onclick="Checkout.showPaymentPage();" /> 
 ... 
