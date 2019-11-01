@@ -41,9 +41,12 @@ var str_spl = src_str.split("/");
 var num;
 var display_split_strings = '<p>After executing the split method:</p>';
 for (num=0; num < str_spl.length; num++){
+  if(str_spl[num] !="displayResult.php"){
     display_split_strings += str_spl[num] + "<BR>";
-    }
     document.getElementById("splitted_string").innerHTML = display_split_strings;
+  }
+    }
+    
 </script>
 
 </body>
