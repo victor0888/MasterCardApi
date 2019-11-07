@@ -44,7 +44,7 @@ include '_bootstrap.php';
             <li><a href="./threeds2.html">3DS JavaScript API with Session</a></li>
             <li><a href="./3dsRedirectSimple.php">3DS WSAPI Simple responseUrl</a></li>
             <li><a href="./redirect_form.php">Create Checkout Session with Redirect Form and pass session id to Hosted Checkout</a></li>
-            <li><a href="./webhook.html">Webhooks</a></li>
+            <li><a href="./webhook.php">Webhooks</a></li>
         </ul>
     </body>
 </html>
