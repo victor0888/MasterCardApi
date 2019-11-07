@@ -1,3 +1,6 @@
+ <?php 
+?>
+<!doctype html>
 <html>
 <body>
 <div class="container">
