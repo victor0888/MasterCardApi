@@ -3,7 +3,6 @@
 <body>
 <div class="container">
     <div class="row">
-        <?php require_once('index.php'); ?>
         <div class="col-9">
             <div class="row">
                 <div class="col-9 webhooks">
