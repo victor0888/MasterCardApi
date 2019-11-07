@@ -1,6 +1,6 @@
 $(function () {
 
-    var notificationUrl = window.location.href.substring(0, window.location.href.lastIndexOf('/')) + "/process-webhook";
+    var notificationUrl = window.location.href.substring(0, window.location.href.lastIndexOf('/')) + "/webhook.php";
     var endpointInfoText = "Please configure the url - '<i>" + notificationUrl + "</i>' in merchant settings to receive notifications.";
     $('.alert-info', '.webhooks').html(endpointInfoText);
 
