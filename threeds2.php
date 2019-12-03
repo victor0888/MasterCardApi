@@ -1,4 +1,7 @@
-	<!DOCTYPE html>
+<?php
+
+?>
+<!DOCTYPE html>
 	<html>
     	<head>
         <script src="https://mtf.gateway.mastercard.com/static/threeDS/1.3.0/three-ds.min.js"
