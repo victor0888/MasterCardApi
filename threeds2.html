@@ -1,7 +1,7 @@
 	<!DOCTYPE html>
 	<html>
     	<head>
-        <script src="https://mtf.gateway.mastercard.com/static/threeDS/1.2.0/three-ds.min.js"
+        <script src="https://mtf.gateway.mastercard.com/static/threeDS/1.3.0/three-ds.min.js"
                 data-error="errorCallback"
                 data-cancel="cancelCallback">
         </script>
@@ -19,7 +19,7 @@
 				merchantId: merchantId,
 				sessionId: sessionId,
 				containerId: "3DSUI",
-				configuration: {userLanguage: "en-AU", wsVersion: 53},
+				configuration: {userLanguage: "en-AU", wsVersion: 54},
 				callback: function(data) {
 						if(ThreeDS.isConfigured()) {
 							console.log("EMV3DS configured.");
@@ -40,9 +40,9 @@
 				console.log('Initiate Clicked');
 				var orderId = document.getElementById('orderid').value;
 				var transactionId = document.getElementById('transactionId').value;
-				
+				//var currency = document.getElementById('currency').value;
 				ThreeDS.initiateAuthentication(orderId, transactionId, function (data) {
-					document.getElementById('log').innerHTML= json.stringify(data, null, 2);
+					//document.getElementById('log').innerHTML= json.stringify(data, null, 2);
 					if (data && data.error) {
 						var error = data.error;
 						//Something bad happened, the error value will match what is returned by the Authentication API
@@ -56,17 +56,16 @@
 				 
 						//data.response will contain information like gatewayRecommendation, authentication version, etc.
 						console.log("REST API raw response ", data.restApiResponse);
+						document.getElementById('log1').innerHTML=  JSON.stringify(data.restApiResponse);
 						console.log("Correlation Id", data.correlationId);
 						console.log("Gateway Recommendation", data.gatewayRecommendation);
 						console.log("HTML Redirect Code", data.htmlRedirectCode);
 						console.log("Authentication Version", data.authenticationVersion);
 						 
 						switch (data.gatewayRecommendation) {
-							case "PROCEED_WITH_AUTHENTICATION":
+							case "PROCEED":
 								authenticatePayer();//merchant's method
-								break;
-							case "PROCEED_WITH_PAYMENT":
-								pay();//merchant's method, you can proceed with the payment, for example the payer might not be enrolled for 3DS1 or 3DS2.
+								//authenticate3DS();
 								break;
 							case "DO_NOT_PROCEED":
 								displayReceipt(data);//merchant's method, you can offer the payer the option to try another payment method.
@@ -76,6 +75,40 @@
     });
 				
 				}
+ function authenticate3DS () {
+	console.log('Initiate Clicked');
+	var orderId = document.getElementById('orderid').value;
+	var transactionId = document.getElementById('transactionId').value;
+	ThreeDS.authenticatePayer(orderId, transactionId, function (data) {
+    if (!data.error) {
+        //data.response will contain all the response payload from the AUTHENTICATE_PAYER call.
+        console.log("REST API response ", data.restApiResponse);
+        console.log("HTML redirect code", data.htmlRedirectCode);
+		//displayReceipt(data);
+        document.getElementById('log2').innerHTML=  JSON.stringify(data.restApiResponse);
+		document.getElementById('log3').innerHTML=  JSON.stringify(data.htmlRedirectCode);
+		document.getElementById('log4').innerHTML=  displayReceipt(data);
+    }
+});
+}
+ 
+function displayReceipt(apiResponse) {
+    var responseBody = {
+        "apiResponse": apiResponse
+    };
+ 
+    var xhr = new XMLHttpRequest();
+    xhr.open('PUT', '3dsreceipt', true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == XMLHttpRequest.DONE) {
+            document.documentElement.innerHTML = this.response;
+        }
+    }
+    xhr.send(JSON.stringify(responseBody));
+}
+
+
 				
 				
 
@@ -92,12 +125,32 @@
 		Order ID: <input type='text' id='orderid' /><br />
 		Transaction ID: <input type='text' id='transactionId' /><br />
 		<button  id='initiate' onclick="initiate3DS();">Initiate 3DS</button> <br />
-		
-		<div id="3DSUI" hidden="true"></div>
+		<button  id='authenticate' onclick="authenticate3DS();">Authenticate 3DS</button> <br />
+		<div id="3DSUI" hidden="false"></div>
 		
 		</td>
 		<td>
 		<pre class="apiresponse"><code id="log" json=""></code></pre>
+		</td>
+		</tr>
+		<tr>
+		<td>
+		<pre class="apiresponse"><code id="log1" json=""></code></pre>
+		</td>
+		</tr>
+		<tr>
+		<td>
+		<pre class="apiresponse"><code id="log2" json=""></code></pre>
+		</td>
+		</tr>
+		<tr>
+		<td>
+		<pre class="apiresponse"><code id="log3" json=""></code></pre>
+		</td>
+		</tr>
+		<tr>
+		<td>
+		<pre class="apiresponse"><code id="log4" json=""></code></pre>
 		</td>
 		</tr>
 		</table>
