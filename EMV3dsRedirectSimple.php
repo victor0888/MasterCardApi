@@ -69,7 +69,8 @@ echo "</pre>";
     ?></p>
     <br><p><h2>The EMV 3DS ORDER ID is:</h2>
     <?php $emv3ds_ORDERID = $_POST['order_id']; echo $emv3ds_ORDERID; 
-    var_dump($_REQUEST);?> </p>
+    //var_dump($_REQUEST);
+    ?> </p>
     <br><p><h2>The EMV 3DS TRANSACTION ID is:</h2>
     <?php $emv3ds_TRANSACTIONID= $_POST['transaction_id']; echo $emv3ds_TRANSACTIONID;?></p>
      <br><p><h2>The EMV 3DS RECOMMENDATION IS:</h2>
