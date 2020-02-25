@@ -68,7 +68,7 @@
 						switch (data.gatewayRecommendation) {
 							case "PROCEED":
 								//authenticatePayer();//merchant's method
-								authenticate3DS();
+								window.setTimeout(authenticate3DS, 5000);
 								break;
 							case "DO_NOT_PROCEED":
 								displayReceipt(data);//merchant's method, you can offer the payer the option to try another payment method.
@@ -90,12 +90,12 @@
 		//displayReceipt(data);
         document.getElementById('log2').innerHTML=  JSON.stringify(data.restApiResponse);
 		document.getElementById('log3').innerHTML=  JSON.stringify(data.htmlRedirectCode);
-		document.getElementById('log4').innerHTML=  displayReceipt(data);
+		//document.getElementById('log4').innerHTML=  displayReceipt(data);
     }
 });
 }
- 
-function displayReceipt(apiResponse) {
+		
+/*function displayReceipt(apiResponse) {
     var responseBody = {
         "apiResponse": apiResponse
     };
@@ -110,7 +110,7 @@ function displayReceipt(apiResponse) {
     }
     xhr.send(JSON.stringify(responseBody));
 }
-
+*/
 
 				
 				
