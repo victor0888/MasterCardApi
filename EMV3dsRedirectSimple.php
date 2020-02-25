@@ -67,6 +67,12 @@ echo "</pre>";
     <?php $pares = $_POST['PaRes']; echo $pares; 
     //var_dump($pares);
     ?></p>
+    <br><p><h2>The EMV 3DS ORDER ID is:</h2>
+    <?php $emv3ds_ORDERID= $_POST['order.id']; echo $emv3ds_ORDERI;?></p>
+    <br><p><h2>The EMV 3DS TRANSACTION ID is:</h2>
+    <?php $emv3ds_TRANSACTIONID= $_POST['transaction.id']; echo $emv3ds_TRANSACTIONID;?></p>
+     <br><p><h2>The EMV 3DS RECOMMENDATION IS:</h2>
+    <?php $emv3ds_RECOMMENDATION= $_POST['response.gatewayRecommendation']; echo $emv3ds_RECOMMENDATION;?></p>
 </body>
 
 </html>
