@@ -130,8 +130,8 @@
 		<br />
 		Order ID: <input type='text' id='orderid' /><br />
 		Transaction ID: <input type='text' id='transactionId' /><br />
-		<button  id='initiate' onclick="initiate3DS();">Initiate 3DS</button> <br />
-		<button  id='authenticate' onclick="authenticate3DS();">Authenticate 3DS</button> <br />
+		<button  id='initiate' onclick="initiate3DS();">Initiate and Authenticate Payer 3DS</button> <br />
+		<!--<button  id='authenticate' onclick="authenticate3DS();">Authenticate 3DS</button> <br />-->
 		<div id="3DSUI" hidden="false"></div>
 		
 		</td>
