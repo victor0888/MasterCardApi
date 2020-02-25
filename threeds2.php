@@ -80,6 +80,9 @@
 				}
  function authenticate3DS () {
 	console.log('Initiate Clicked');
+        var optionalParams = {
+		fullScreenRedirect : true
+	}
 	var orderId = document.getElementById('orderid').value;
 	var transactionId = document.getElementById('transactionId').value;
 	ThreeDS.authenticatePayer(orderId, transactionId, function (data) {
