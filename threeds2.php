@@ -92,7 +92,7 @@
 		document.getElementById('log3').innerHTML=  JSON.stringify(data.htmlRedirectCode);
 		//document.getElementById('log4').innerHTML=  displayReceipt(data);
     }
-});
+}, optionalParams);
 }
 		
 /*function displayReceipt(apiResponse) {
