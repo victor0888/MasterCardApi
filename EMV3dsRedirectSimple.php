@@ -81,7 +81,7 @@ echo "</pre>";
 
 ?>
 </table>
-    <br><p><h2>The PaRes value returned is:</h2>
+    <!--br><p><h2>The PaRes value returned is:</h2>
     <?php $pares = $_POST['PaRes']; echo $pares; 
     //var_dump($pares);
     ?></p>
@@ -94,7 +94,7 @@ echo "</pre>";
      <br><p><h2>The EMV 3DS RECOMMENDATION IS:</h2>
     <?php $emv3ds_RECOMMENDATION= $_POST['response_gatewayRecommendation']; echo $emv3ds_RECOMMENDATION;?></p>
      <br><p><h2>The EMV 3DS RESULT IS:</h2>
-    <?php $emv3ds_RESULT= $_POST['result']; echo $emv3ds_RESULT;?></p>
+    <?php $emv3ds_RESULT= $_POST['result']; echo $emv3ds_RESULT;?></p-->
 </body>
 
 </html>
