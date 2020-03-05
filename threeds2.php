@@ -68,7 +68,7 @@
 						switch (data.gatewayRecommendation) {
 							case "PROCEED":
 								//authenticatePayer();//merchant's method
-								window.setTimeout(authenticate3DS, 5000);
+								window.setTimeout(authenticate3DS, 10000);
 								break;
 							case "DO_NOT_PROCEED":
 								displayReceipt(data);//merchant's method, you can offer the payer the option to try another payment method.
