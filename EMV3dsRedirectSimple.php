@@ -63,6 +63,24 @@ echo "</pre>";
     <?php foreach (getallheaders() as $name => $value) { 
     echo "$name: $value <br>"; 
 }  ?></pre>
+ <table>
+<?php 
+
+
+    foreach ($_POST as $key => $value) {
+        echo "<tr>";
+        echo "<td>";
+        echo $key;
+        echo "</td>";
+        echo "<td>";
+        echo $value;
+        echo "</td>";
+        echo "</tr>";
+    }
+
+
+?>
+</table>
     <br><p><h2>The PaRes value returned is:</h2>
     <?php $pares = $_POST['PaRes']; echo $pares; 
     //var_dump($pares);
