@@ -123,6 +123,9 @@
 	<body>
 		
 		<table border=0>
+			<h2>Prerequisite</h2>
+			<h3>Step 1 - CREATE_SESSION (Version 55) to be run to obtain session ID.  </h3>
+			<h3>Step 2 - UPDATE_SESSION (Version 55) to be run to add card details, and order ID.  </h3>
 		<tr><td>
 		Merchant ID: <input type='text' id='merchantid' /> <br />
 		Session ID: <input type='text' id='sessionid' /> <br />
