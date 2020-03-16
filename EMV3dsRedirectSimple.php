@@ -85,7 +85,7 @@ echo "</pre>";
     <?php $pares = $_POST['PaRes']; echo $pares; 
     //var_dump($pares);
     ?></p>
-    <br><p><h2>The EMV 3DS ORDER ID is:</h2>
+    <br><p><h2>The EMV 3DS ORDER ID is: </h2>
     <?php $emv3ds_ORDERID = $_POST['order_id']; echo $emv3ds_ORDERID; 
     //var_dump($_REQUEST);
     ?> </p>
